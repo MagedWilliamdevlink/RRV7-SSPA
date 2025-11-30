@@ -19,19 +19,19 @@ node service_manager.js create serviceA
 node service_manager.js create serviceB
 ```
 
-3. Run the static server in an new terminal
+3. Run all the services in an new terminal
+```bash
+npm run dev:services
+```
+
+4. Run the static server in an new terminal
 ```bash
 npm run dev:config
 ```
 
-4. Run the Shell in an new terminal
+5. Run the Shell in an new terminal
 ```bash
 npm run dev:shell
-```
-
-5. Run all the services in an new terminal
-```bash
-npm run dev:services
 ```
 
 6. add a new service and reload the shell
