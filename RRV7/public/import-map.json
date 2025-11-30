@@ -1,0 +1,24 @@
+{
+  "imports": {
+    "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+    "react-dom/client": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+    "@rrv7/serviceA": "http://localhost:8081/rrv7-serviceA.js",
+    "@rrv7/serviceB": "http://localhost:8082/rrv7-serviceB.js",
+    "@rrv7/serviceD": "http://localhost:8083/rrv7-serviceD.js"
+  },
+  "applications": [
+    {
+      "name": "@rrv7/serviceA",
+      "route": "serviceA"
+    },
+    {
+      "name": "@rrv7/serviceB",
+      "route": "serviceB"
+    },
+    {
+      "name": "@rrv7/serviceD",
+      "route": "serviceD"
+    }
+  ]
+}

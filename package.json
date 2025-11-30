@@ -1,0 +1,36 @@
+{
+  "name": "rrv7-single-spa-monorepo",
+  "version": "1.0.0",
+  "description": "React Router v7 + Single-SPA Microfrontends",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd RRV7 && npm install && cd ../config-server && npm install && cd ..",
+    "dev:shell": "cd RRV7 && npm run dev",
+    "dev:services": "cd RRV7 && npm run services",
+    "dev:config": "cd config-server && npm start",
+    "dev:all": "concurrently --names \"Config,Shell,Services\" --prefix-colors \"blue,cyan,green\" \"npm run dev:config\" \"npm run dev:shell\" \"npm run dev:services\"",
+    "build": "npm run build:rrv7 && npm run build:services",
+    "build:rrv7": "cd RRV7 && npm run build",
+    "build:services": "cd services/serviceA && npm run build && cd ../serviceB && npm run build",
+    "service": "node service_manager.js",
+    "service:create": "node service_manager.js create",
+    "service:list": "node service_manager.js list",
+    "service:refresh": "node service_manager.js refresh",
+    "service:help": "node service_manager.js help",
+    "config-server": "cd config-server && npm start",
+    "devservice:serviceA": "cd services/serviceA && npm start",
+    "devservices:all": "concurrently --names \"serviceA,serviceB\" --prefix-colors \"green,magenta\" \"npm run devservice:serviceA\" \"npm run devservice:serviceB\"",
+    "devservice:serviceB": "cd services/serviceB && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "react-router",
+    "single-spa",
+    "microfrontends",
+    "ssr"
+  ],
+  "author": "",
+  "license": "MIT"
+}
